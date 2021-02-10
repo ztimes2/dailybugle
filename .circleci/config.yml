@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  publish:
+    docker:
+      - image: circleci/golang
+
+    steps:
+      - checkout
+      - run:
+          name: Publish a newspaper issue
+          command: go run cmd/dailybugle/main.go
+
+workflows:
+  version: 2
+  publish-workflow:
+    jobs:
+      - publish
+
+    triggers:
+      - schedule:
+          cron: "0 1 * * 1-5" # Run on Monday-Friday at 1:00AM UTC (9:00AM SGT)
+          filters:
+            branches:
+              only:
+                - main
