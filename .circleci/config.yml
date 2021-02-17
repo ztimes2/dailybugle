@@ -18,7 +18,7 @@ workflows:
 
     triggers:
       - schedule:
-          cron: "0 1 * * 1-5" # Run on Monday-Friday at 1:00AM UTC (9:00AM SGT)
+          cron: "40 8 * * 1-5" # Run on Monday-Friday at 1:00AM UTC (9:00AM SGT)
           filters:
             branches:
               only:
