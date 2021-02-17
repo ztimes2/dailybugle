@@ -13,12 +13,6 @@ import (
 	"google.golang.org/api/option"
 )
 
-const (
-	crmDispatchesCalendarID = "zalora.com_vjahlu1fmi8jnmetoclsl75asg@group.calendar.google.com"
-	campaignsCalendarID     = "zalora.com_6km7sa5pr2qhhg3k14kc0tgb4c@group.calendar.google.com"
-	devMilestonesCalendarID = "zalora.com_n0shb4lud7nfmavj89qq003vu8@group.calendar.google.com"
-)
-
 // NewClient returns a new http.Client that uses the given authentication credentials
 // when making HTTP requests. If the provided OAuth2 token contains a refresh token,
 // then it will automatically be refreshed after its expiry.
